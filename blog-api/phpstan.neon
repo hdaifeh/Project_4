@@ -1,0 +1,13 @@
+includes:
+   - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+
+parameters:
+   level: 7
+
+services:
+   -
+      class: Nette\DI\Container
+      factory: Nette\DI\Container::createFromLoader
+      arguments: [ '@containerBuilder' ]
+
+checkMissingIterableValueType: false
