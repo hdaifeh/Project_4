@@ -1,0 +1,10 @@
+$errors = [
+    'invalid_credentials' => 'Invalid email or password',
+    'missing_parameter' => 'A required parameter is missing',
+    // etc.
+];
+
+// in some code that detects an error:
+$error_code = 'invalid_credentials';
+$log->warning('Login attempt failed: ' . $errors[$error_code]);
+return new JsonResponse(['error' => $errors[$error_code]], 401);

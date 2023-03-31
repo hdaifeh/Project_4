@@ -1,4 +1,4 @@
-//*Connect to your MySQL server using the following command (replace [username] and [password] with your MySQL username and password):*//
+//*Connect to my MySQL server using the following command (replace [username] and [password] with your MySQL username and password):*//
 
 mysql -u [username] -p [password]
 
