@@ -1,92 +1,153 @@
-# Project_4
+https://gitlab.com/ammar.hdaifeh/project_4.git
+
+The API allows users to create posts, categories, and post categories using full OOP paradigms. The API has routes for creating, reading, updating, and deleting posts and categories. The project uses the Model-View-Controller (MVC), Repository, Dependency Injection (DI), and Fluent Interface design patterns to enable modular and decoupled development, maintainability, and reusability.
+
+The Model-View-Controller (MVC) pattern is used to separate the concerns of the application into three interconnected components: the model, the view, and the controller. The Repository pattern provides a way to manage data storage and retrieval in a clean and modular way, while the Dependency Injection (DI) pattern helps achieve loosely coupled software components. Finally, the Fluent Interface pattern is used to create a more readable and intuitive API for constructing objects or calling methods.
+
+The API project has several app routes, including home, OpenAPI, JWT, Posts, and Categories. These routes have different HTTP request methods for creating, reading, updating, and deleting resources.
+
+To install the project, clone the repository using the command git clone git@github... and follow the instructions provided in the project documentation.
 
 
 
-## Getting started
+Fluent Interface
+The Fluent Interface is an object-oriented programming design pattern that allows for a more readable and intuitive API for constructing objects or calling methods. It is also known as a method chaining pattern.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+In a Fluent Interface, a series of method calls are chained together in a single statement, with each method returning the object itself or a modified version of it. This allows for a more natural and readable syntax, as the method calls can be read like a sentence or a list of instructions.
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
+Fluent Interfaces are commonly used in libraries and frameworks that provide APIs for building complex objects or executing multiple steps in a sequence. They can improve code readability and reduce errors by making the API more intuitive and easier to understand.
 
-## Add your files
+However, Fluent Interfaces can also make the code more complex and harder to debug, especially if the chain of method calls is too long or too nested. Careful design and testing are required to ensure that the Fluent Interface is both readable and maintainable.
 
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+App Routes
+The API includes the following routes:
 
-```
-cd existing_repo
-git remote add origin https://gitlab.com/ammar.hdaifeh/project_4.git
-git branch -M main
-git push -uf origin main
-```
+Home
+[GET] /
+OpenApi
+[GET] /openapi
+JWT
+[POST] /jwt
+Posts
+[POST] /v1/posts/create
+[GET] /v1/posts/all
+[GET] /v1/posts/{id}
+[GET] /v1/posts/getSlug/{slug}
+[PUT] /v1/posts/{id}
+[DELETE] /v1/posts/{id}
+Categories
+[POST] /v1/categories/create
+[GET] /v1/categories/all
+[GET] /v1/categories/{id}
+[PUT] /v1/categories/{id}
+[DELETE] /v1/categories/{id}
+Installation Instructions
+To install and run the API on your local machine, follow these instructions:
 
-## Integrate with your tools
+Clone the repository: git clone https://gitlab.com/ammar.hdaifeh/project_4.git
+Install the dependencies: composer install
+Copy the .env.example file to .env: cp .env.example .env
+Generate the application key: php artisan key:generate
+Set up your database connection in the .env file
+Run the database migrations: php artisan migrate
+Start the server: php artisan serve
+After following these steps, the API should be up and running on your local machine.
 
-- [ ] [Set up project integrations](https://gitlab.com/ammar.hdaifeh/project_4/-/settings/integrations)
+Home
+[GET] /
+OpenApi
+[GET] /openapi
+JWT
+[POST] /jwt
+Posts
+[POST] /v1/posts/create
+[GET] /v1/posts/all
+[GET] /v1/posts/{id}
+[GET] /v1/posts/getSlug/{slug}
+[PUT] /v1/posts/{id}
+[DELETE] /v1/posts/{id}
+Categories
+[POST] /v1/categories/create
+[GET] /v1/categories/all
+[GET] /v1/categories/{id}
+[PUT] /v1/categories/{id}
+[DELETE] /v1/categories/{id}
+Installation Instructions
+To install and run the project:
 
-## Collaborate with your team
+Clone the repository: git clone https://gitlab.com/ammar.hdaifeh/project_4.git 
+Move into the project directory: cd Doctrine-API-project
+Install the dependencies: composer install
+Create the database: bin/console doctrine:database:create
+Create the database schema: bin/console doctrine:schema:create
+(Optional) Load the fixtures: bin/console doctrine:fixtures:load
+Start the server: bin/console server:run
+Testing
+The project includes a set of automated tests. To run the tests, execute the following command from the project directory:
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+bash
+Copy code
+composer test
+This will run the PHPUnit test suite and output the results.
 
-## Test and Deploy
+Contributing
+Contributions to the project are welcome. To contribute:
 
-Use the built-in continuous integration in GitLab.
+Fork the project repository
+Create a new branch for your changes: git checkout -b my-feature-branch
+Make your changes and commit them
+Push your changes to your fork: git push origin my-feature-branch
+Open a pull request from your fork to the main repository
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
 
-***
 
-# Editing this README
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
+Home
+[GET] /
+OpenApi
+[GET] /openapi
+JWT
+[POST] /jwt
+Posts
+[POST] /v1/posts/create
+[GET] /v1/posts/all
+[GET] /v1/posts/{id}
+[GET] /v1/posts/getSlug/{slug}
+[PUT] /v1/posts/{id}
+[DELETE] /v1/posts/{id}
+Categories
+[POST] /v1/categories/create
+[GET] /v1/categories/all
+[GET] /v1/categories/{id}
+[PUT] /v1/categories/{id}
+[DELETE] /v1/categories/{id}
+Installation Instructions
+To install and run the project:
 
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+Clone the repository: git clone https://gitlab.com/ammar.hdaifeh/project_4.git 
+Move into the project directory: cd Doctrine-API-project
+Install the dependencies: composer install
+Create the database: bin/console doctrine:database:create
+Create the database schema: bin/console doctrine:schema:create
+(Optional) Load the fixtures: bin/console doctrine:fixtures:load
+Start the server: bin/console server:run
+Testing
+The project includes a set of automated tests. To run the tests, execute the following command from the project directory:
 
-## Name
-Choose a self-explaining name for your project.
+bash
+Copy code
+composer test
+This will run the PHPUnit test suite and output the results.
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
+Contributing
+Contributions to the project are welcome. To contribute:
 
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+Fork the project repository
+Create a new branch for your changes: git checkout -b my-feature-branch
+Make your changes and commit them
+Push your changes to your fork: git push origin my-feature-branch
+Open a pull request from your fork to the main repository
+License
+This project is licensed under the MIT License - see the LICENSE file for details
