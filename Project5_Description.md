@@ -14,18 +14,11 @@ finally,I Modified my client application to include the JWT token in the Authori
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxMjN9.x7lNDvZzJ7ASzyBAt2mF7CceKbl1O-J7V8vbIP0uSwA
 
 
-
-
 Change the database implementation from PDO to Doctrine ORM. Doctrine ORM is a powerful object-relational mapping (ORM) tool that can simplify database operations. You can follow the Doctrine documentation to set up the ORM for your project.
 
 Write unit tests for at least one class using a testing framework like PHPUnit. You can write tests for any part of your application, such as the authentication or database operations.
 
 Implement custom error messages and logs to provide better error handling for your REST API. You can use a logging library like Monolog to write logs.
 
-Push your application to your GitHub account, including the file .github/workflows for continuous integration. You can use GitHub Actions to automate your testing and deployment process.
+Push  application to your GitHub account, including the file .github/workflows for continuous integration. I can use GitHub Actions to automate your testing and deployment process.
 
-Update the README file to reflect the changes made to your project. Make sure to include any new dependencies or installation instructions.
-
-Optional: Add the option to run the application with Docker. You can use a Dockerfile to package your application and dependencies into a container.
-
-Optional: Deploy your application to fly.io. Fly.io is a platform for deploying and running applications at the edge. You can use their platform to deploy your application to multiple regions around the world.
