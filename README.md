@@ -1,5 +1,5 @@
 https://gitlab.com/ammar.hdaifeh/project_4.git
-
+<a href="https://app.daily.dev/hdaifeh"><img src="https://api.daily.dev/devcards/7c80c37c95294568893ad398eb4be97d.png?r=2pi" width="400" alt="Ammar HDAIFEH's Dev Card"/></a>
 The API allows users to create posts, categories, and post categories using full OOP paradigms. The API has routes for creating, reading, updating, and deleting posts and categories. The project uses the Model-View-Controller (MVC), Repository, Dependency Injection (DI), and Fluent Interface design patterns to enable modular and decoupled development, maintainability, and reusability.
 
 The Model-View-Controller (MVC) pattern is used to separate the concerns of the application into three interconnected components: the model, the view, and the controller. The Repository pattern provides a way to manage data storage and retrieval in a clean and modular way, while the Dependency Injection (DI) pattern helps achieve loosely coupled software components. Finally, the Fluent Interface pattern is used to create a more readable and intuitive API for constructing objects or calling methods.
